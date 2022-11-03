@@ -1,17 +1,21 @@
-
 <!-- saved from url=(0042)https://webapi4.jnu.edu.cn/xgfxm/index.php -->
-<html lang="zh"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html lang="zh">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
     <title>返校及进出校园卡</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <link rel="stylesheet" href="./返校及进出校园卡_files/weui.css">
-    <link rel="stylesheet" href="./返校及进出校园卡_files/weuix.css">
-    <link href="./返校及进出校园卡_files/layui.css" rel="stylesheet">
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,user-scalable=0"
+    />
+    <link rel="stylesheet" href="./返校及进出校园卡_files/weui.css" />
+    <link rel="stylesheet" href="./返校及进出校园卡_files/weuix.css" />
+    <link href="./返校及进出校园卡_files/layui.css" rel="stylesheet" />
     <script src="./返校及进出校园卡_files/zepto.min.js.下载"></script>
     <script src="./返校及进出校园卡_files/qrcode.js.下载"></script>
-<script type="text/javascript">
-    //得到时间并写入div
-    function getDate(){
+    <script type="text/javascript">
+      //得到时间并写入div
+      function getDate() {
         //获取当前时间
         var date = new Date();
         //格式化为本地时间格式
@@ -20,136 +24,153 @@
         var div1 = document.getElementById("times");
         //将时间写入div
         div1.innerHTML = date1;
-    }
-    //使用定时器每秒向div写入当前时间
-    setInterval("getDate()",1000);
-</script>
-<style type="text/css">
-        .whiteFont {
-            color: white;
-        }
+      }
+      //使用定时器每秒向div写入当前时间
+      setInterval("getDate()", 1000);
+    </script>
+    <style type="text/css">
+      .whiteFont {
+        color: white;
+      }
 
-        .yellow_bg {
-            background-color: #CDCD00
-        }
+      .yellow_bg {
+        background-color: #cdcd00;
+      }
 
-        .green_bg {
-            background-color: #00FF00
-        }
+      .green_bg {
+        background-color: #00ff00;
+      }
 
-        .red_bg {
-            background-color: #FF0000
-        }
+      .red_bg {
+        background-color: #ff0000;
+      }
 
-        body {
-            background: url("xgfxm\\cssjs\\imgs\\bg.jpg") repeat;
-            background-size: 100%;
-        }
+      body {
+        background: url("xgfxm\\cssjs\\imgs\\bg.jpg") repeat;
+        background-size: 100%;
+      }
 
-        .cl0 {
-            z-index: 9999;
-            background: url("xgfxm\\cssjs\\imgs\\3_01.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl0 {
+        z-index: 9999;
+        background: url("xgfxm\\cssjs\\imgs\\3_01.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl1 {
-            z-index: 9999;
-            margin-top: -20px;
-            background: url("xgfxm\\cssjs\\imgs\\3_02.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl1 {
+        z-index: 9999;
+        margin-top: -20px;
+        background: url("xgfxm\\cssjs\\imgs\\3_02.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl2 {
-            z-index: 9999;
-            text-align: center;
-            background: url("xgfxm\\cssjs\\imgs\\3_03.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl2 {
+        z-index: 9999;
+        text-align: center;
+        background: url("xgfxm\\cssjs\\imgs\\3_03.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl3 {
-            height: 200px;
-            margin-top: -40px;
-            background: url("xgfxm\\cssjs\\imgs\\3_04.jpg") repeat;
-            background-size: 100%;
-        }
+      .cl3 {
+        height: 200px;
+        margin-top: -40px;
+        background: url("xgfxm\\cssjs\\imgs\\3_04.jpg") repeat;
+        background-size: 100%;
+      }
 
-        .cl4 {
-            background: url("xgfxm\\cssjs\\imgs\\3_05.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl4 {
+        background: url("xgfxm\\cssjs\\imgs\\3_05.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl5 {
-            background: url("xgfxm\\cssjs\\imgs\\3_06.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl5 {
+        background: url("xgfxm\\cssjs\\imgs\\3_06.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl6_yellow {
-            height: 40px;
-            background: url("xgfxm\\cssjs\\imgs\\3_07_y.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl6_yellow {
+        height: 40px;
+        background: url("xgfxm\\cssjs\\imgs\\3_07_y.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl6_red {
-            height: 40px;
-            background: url("xgfxm\\cssjs\\imgs\\1_07.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl6_red {
+        height: 40px;
+        background: url("xgfxm\\cssjs\\imgs\\1_07.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl6_green {
-            height: 40px;
-            background: url("xgfxm\\cssjs\\imgs\\2_07.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl6_purple {
+        height: 40px;
+        background: url("xgfxm\\cssjs\\imgs\\1_08.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl7 {
-            background: url("xgfxm\\cssjs\\imgs\\3_08.jpg") no-repeat;
-            background-size: 100%;
-        }
+      .cl6_green {
+        height: 40px;
+        background: url("xgfxm\\cssjs\\imgs\\2_07.jpg") no-repeat;
+        background-size: 100%;
+      }
 
-        .cl8 {
-            height: 60px;
-            background: url("xgfxm\\cssjs\\imgs\\3_10_1.png") no-repeat;
-            background-size: 100%;
-        }
+      .cl7 {
+        background: url("xgfxm\\cssjs\\imgs\\3_08.jpg") no-repeat;
+        background-size: 100%;
+      }
+
+      .cl8 {
+        height: 60px;
+        background: url("xgfxm\\cssjs\\imgs\\3_10_1.png") no-repeat;
+        background-size: 100%;
+      }
     </style>
-</head>
-<body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
-
-
-
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1052.0" data-gr-ext-installed="">
     <div class="page-hd cl0"></div>
-    <div class="page-hd cl1">
-    </div>
+    <div class="page-hd cl1"></div>
     <div class="page-hd cl2">
-        <p style="font-size: 30px; font-family: STHeiti; font-weight: bold;" align="center">孙菀林</p>
+      <p
+        style="font-size: 30px; font-family: STHeiti; font-weight: bold"
+        align="center"
+      >
+        孙菀林
+      </p>
     </div>
-    <div class="page-hd cl3" style=" text-align: center;float:none;">
-        <p style="font-size: 20px; text-align:center;">202134261026</p>
-        <p style="font-size: 16px; text-align:center;">信息科学技术学院</p>
-        <p style="font-size: 16px; text-align:center;">
-        </p>
-        <div id="qr" class="tcenter" style="padding: 10px;height:170px;"><img width="110px" height="160px" src="xgfxm\cssjs\tx\2022\syl.jpg"></div>
+    <div class="page-hd cl3" style="text-align: center; float: none">
+      <p style="font-size: 20px; text-align: center">202134261026</p>
+      <p style="font-size: 16px; text-align: center">信息科学技术学院</p>
+      <p style="font-size: 16px; text-align: center"></p>
+      <div id="qr" class="tcenter" style="padding: 10px; height: 170px">
+        <img width="110px" height="160px" src="xgfxm\cssjs\tx\2022\syl.jpg" />
+      </div>
 
-        <p style="font-size: 16px; text-align:center;">
-        </p>
-        <p style="font-size: 16px; font-weight: 200;" align="center"></p>
+      <p style="font-size: 16px; text-align: center"></p>
+      <p style="font-size: 16px; font-weight: 200" align="center"></p>
     </div>
-    <div class="page-hd cl4"><p style="font-size: 20px; font-weight:bold;" align="center"><span id="times">2022/3/22 19:54:56</span></p></div>
-    <div class="page-hd cl5">
+    <div class="page-hd cl4">
+      <p style="font-size: 20px; font-weight: bold" align="center">
+        <span id="times">2022/3/22 19:54:56</span>
+      </p>
+    </div>
+    <div class="page-hd cl5"></div>
+
+    <div id="colorDIV" class="page-hd cl6 cl6_purple" permit="purple-bg">
+      <p style="color: #fff; font-size: 25px; font-weight: 200" align="center">
+        予以通行
+      </p>
     </div>
 
-                <div id="colorDIV" class="page-hd cl6 cl6_green" permit="green-bg">        
-                <p style=" color:#fff;   font-size: 25px;  font-weight: 200;" align="center">已在审批名单内</p>
-            </div>
-        
     <div class="page-hd cl7"></div>
     <div class="page-hd cl8"></div>
 
-        
-            
-
-  
- <div></div><div id="new-tab-sidebar" class="hidden"><div class="wrap">
+    <div></div>
+    <div id="new-tab-sidebar" class="hidden">
+      <div class="wrap">
         <!-- <img class="new-tab-logo" src="chrome-extension://meffljleomgifbbcffejnmhjagncfpbd/img/128x128.png"> -->
-        
-    <ul></ul></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+
+        <ul></ul>
+      </div>
+    </div>
+  </body>
+  <grammarly-desktop-integration
+    data-grammarly-shadow-root="true"
+  ></grammarly-desktop-integration>
+</html>
