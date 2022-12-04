@@ -14,6 +14,14 @@
     <script src="./返校及进出校园卡_files/zepto.min.js.下载"></script>
     <script src="./返校及进出校园卡_files/qrcode.js.下载"></script>
     <script type="text/javascript">
+      // 生成随机数
+      function getRandomNumber() {
+        var number = Math.floor(Math.random() * 90 + 10);
+        var number1 = number.toString();
+        var div1 = document.getElementById("number");
+        div1.innerHTML = number1;
+      }
+      setTimeout("getRandomNumber()", 200);
       //得到时间并写入div
       function getDate() {
         //获取当前时间
@@ -26,9 +34,72 @@
         div1.innerHTML = date1;
       }
       //使用定时器每秒向div写入当前时间
-      setInterval("getDate()", 1000);
+      setInterval("getDate()", 200);
     </script>
     <style type="text/css">
+      @keyframes scaleDraw {
+        /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+        0% {
+          transform: scale(1);
+          /*开始为原始大小*/
+        }
+        25% {
+          transform: scale(1.1);
+          /*放大1.1倍*/
+        }
+        50% {
+          transform: scale(1);
+        }
+        75% {
+          transform: scale(1.1);
+        }
+      }
+      .zp {
+        -webkit-animation-name: scaleDraw;
+        /*关键帧名称*/
+        -webkit-animation-timing-function: ease-in-out;
+        /*动画的速度曲线*/
+        -webkit-animation-iteration-count: infinite;
+        /*动画播放的次数*/
+        -webkit-animation-duration: 4s;
+        /*动画所花费的时间*/
+      }
+
+      .bUtonadaLij {
+        width: 218rpx;
+        height: 80rpx;
+        /*background: #FFF;*/
+        border-radius: 40rpx;
+        line-height: 80rpx;
+        text-align: center;
+        font-size: 28rpx;
+        color: #006a4c;
+        border: 2rpx solid #006a4c;
+        font-weight: bold;
+        -webkit-animation-name: scaleDraw;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 3s;
+      }
+
+      @keyframes scaleDraw {
+        0% {
+          transform: scale(1);
+        }
+
+        25% {
+          transform: scale(0.8);
+        }
+
+        50% {
+          transform: scale(1);
+        }
+
+        75% {
+          transform: scale(0.8);
+        }
+      }
+
       .whiteFont {
         color: white;
       }
@@ -139,9 +210,17 @@
       <p style="font-size: 16px; text-align: center">信息科学技术学院</p>
       <p style="font-size: 16px; text-align: center"></p>
       <div id="qr" class="tcenter" style="padding: 10px; height: 170px">
-        <a href="http://yulinsuen.github.io" target="_blank">
+        <a
+          href="https://icas.jnu.edu.cn/cas/logout?service=https://webapi4.jnu.edu.cn/xgfxmcs/index.php?url="
+          target="_blank"
+        >
           <!-- 110x160 -->
-          <img width="130px" height="150px" src="xgfxm\cssjs\tx\2022\f5.jpeg" />
+          <img
+            class="zp"
+            width="140px"
+            height="160px"
+            src="xgfxm\cssjs\tx\2022\f5.jpeg"
+          />
         </a>
       </div>
 
@@ -150,16 +229,49 @@
     </div>
     <div class="page-hd cl4">
       <p style="font-size: 20px; font-weight: bold" align="center">
-        <span id="times">2022/11/4 下午18:54:56</span>
+        <span id="times"></span>
       </p>
     </div>
-    <div class="page-hd cl5"></div>
 
+    <div class="page-hd cl5">
+      <p
+        style="
+          font-size: 20px;
+          font-weight: bold;
+          text-align: center;
+          margin-top: -30px;
+        "
+        id="number"
+      ></p>
+    </div>
     <div id="colorDIV" class="page-hd cl6 cl6_purple" permit="purple-bg">
-      <p style="color: #fff; font-size: 25px; font-weight: 200" align="center">
+      <p
+        style="color: #fff; font-size: 25px; font-weight: 200"
+        align="center"
+        class="bUtonadaLij"
+      >
         予以通行
       </p>
+      <p
+        style="color: #fff; font-size: 15px; font-weight: 200; margin-top: 4px"
+        align="center"
+      >
+        随机码: mOdEfP
+      </p>
     </div>
+    <!-- <div class="page-hd cl5"></div>
+
+    
+
+    <div id="colorDIV" class="page-hd cl6 cl6_purple" permit="purple-bg">
+      <p
+        style="color: #fff; font-size: 25px; font-weight: 200"
+        align="center"
+        class="bUtonadaLij"
+      >
+        予以通行
+      </p>
+    </div> -->
 
     <div class="page-hd cl7"></div>
     <div class="page-hd cl8"></div>
